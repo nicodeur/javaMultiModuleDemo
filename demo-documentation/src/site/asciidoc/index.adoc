@@ -1,0 +1,55 @@
+= Java Multi-Module Demo
+
+This file was converted from AsciiDoc to HTML by the Maven Site module of the Asciidoctor Maven Plugin.
+
+Here, you can download a demo java project who contains a demo project “ready to go” who implements :
+
+* Spring boot (hibernate - Spring data - Spring MVC)
+* A multi-module project (Service - GUI - API[TODO] )
+* An example of CRUD whith validation (javax.validation)
+* An example of JUnit test and Integration test
+* An example of Liquibase
+* Log, ehcache, ff4j, etc [TODO]
+
+== Run project on localhost
+
+On demo folder :
+[source, bash]
+----
+mvn clean install
+----
+
+== Generate documentation
+On demo folder :
+[source, bash]
+----
+cd demo-documentation
+mvn clean generate-resources
+----
+
+== Software Architecture
+link:softwareArchitecture.html[Software Architecture]
+
+
+== Documentation
+link:article.html[Example for feature documentation]
+
+== Testing
+=== Unit Test
+	
+=== Integration Test
+== Best pratice
+
+
+
+
+== Usefull link
+
+
+== Exemple for DRY
+[TIP]
+====
+Use the include directive to keep your content DRY!
+
+include::_include.adoc[]
+====

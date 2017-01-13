@@ -1,0 +1,18 @@
+== Software architecture
+image::JavaMultiModuleDemo_archi.png[]
+
+
+=== Why separate Model, Repository and Service ?
+
+For maintainability, it's better to cut the application technically.
+
+* `Model`, contains only bean (getter/setter object). Model doesn't contains other code (no business rules, no db request etc). Model can describe integrity constraint.
+* `Repository` contains only the db request. It complete object of Model and send it to Service. Repository doesn't know `Service`
+* `Service` contains all the business rules. It knows `Model` and `Repository`
+* We separate `API` and `gui` to deliver your api or gui separately.
+
+
+=== Why this technology ?
+* Spring boot
+* Liquibase
+* Wiremock
