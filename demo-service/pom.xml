@@ -66,7 +66,7 @@
 		
 		 <!-- END CACHE -->
 		 
-		 <!-- BEGIN OTHER DEPENDENCY -->
+		 <!-- BEGIN TEST DEPENDENCY -->
 		 
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -74,8 +74,8 @@
 			<version>6.8.13</version>
 			<scope>test</scope>
 		</dependency>
-		
- 		<!-- END OTHER DEPENDENCY -->
+	
+ 		<!-- END TEST DEPENDENCY -->
 	</dependencies>
 
 	<!-- BEGIN config liquibase -->

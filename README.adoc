@@ -1,0 +1,35 @@
+# Java Multi-Module Demo
+
+[schema_archi]: readme/JavaMultiModuleDemo_archi.png
+
+Here, you can download a demo java project who contains a demo project “ready to go” who implements :
+
+* Spring boot (hibernate - Spring data - Spring MVC)
+* A multi-module project (Service - GUI - API[TODO] )
+* An example of CRUD whith validation (javax.validation)
+* An example of JUnit test and Integration test
+* An example of Liquibase
+* Log, ehcache, ff4j, etc [TODO]
+
+## Architecture
+![archi][schema_archi] 
+
+### Why separate Model, Repository and Service ?
+
+For maintenability, it's better to cut the application technically.
+* `Model`, contains only bean (getter/setter object). Model doesn't contains other code (no business rules, no db request etc). Model can describe integrity constraint.
+* `Repository` contains only the db request. It complete object of Model and send it to Service. Repository doesn't know `Service`
+* `Service` contains all the business rules. It knows `Model` and `Repository`
+* We separate `API`and `gui` to deliver your api or gui separately.
+
+
+## Why this technology ?
+* Spring boot
+* Liquibase
+* Wiremock
+
+## Testing
+### Unit Test
+
+### Integration Test
+## Best pratice
